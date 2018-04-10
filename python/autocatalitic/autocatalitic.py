@@ -33,9 +33,9 @@ for i in range(0, tsteps):
 
     
 filename='autocat.txt'
-with open(filename, 'w') as salida:
-    for i in range(0, tsteps):
-        salida.write(str(tlist[i])+"   "+str(Alist[i])+"   \n")
+salida.open(filename, 'w')
+for i in range(0, tsteps):
+    salida.write(str(tlist[i])+"   "+str(Alist[i])+"   \n")
 
 plt.plot(tlist,Alist)
 plt.show()

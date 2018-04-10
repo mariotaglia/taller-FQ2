@@ -21,9 +21,9 @@ for i in range(1,tsteps):
        hh[pos] = hh[pos]+1
      
     filename0 = filename+str(i)+'.dat'
-    with open(filename0, 'w') as salida:
-        for j in range(0, tsteps*2):
-            salida.write(str(j-tsteps) + "   " + str(hh[j]) + " \n  ")
+    salida.open(filename0, 'w')
+    for j in range(0, tsteps*2):
+        salida.write(str(j-tsteps) + "   " + str(hh[j]) + " \n  ")
     if (i % 100 == 0):
         plt.plot(hh[750:1250])
 

@@ -23,8 +23,8 @@ for i in range(1, tsteps):
     if (i%200 == 0): # grabar cada 10
         plt.plot(c[250:750])
         filename0 = filename+str(i/20)+'.dat' 
-        with open(filename0,'a') as salida:
-            for j in range(0, xsize):
-                salida.write(str(j)+"   "+str(c[j])+"   \n")
+        salida.open(filename0,'a')
+        for j in range(0, xsize):
+            salida.write(str(j)+"   "+str(c[j])+"   \n")
 
 plt.show()

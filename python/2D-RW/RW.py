@@ -15,8 +15,8 @@ for i in range(1,tsteps):
         xpos[j] = xpos[j] + random.randint(-1,1)
         ypos[j] = ypos[j] + random.randint(-1,1)
 
-    with open(filename, 'a') as salida:
-        salida.write(str(Nwalker)+"\n")
-        salida.write(str(i)+"\n")
-        for j in range(0, Nwalker):
-            salida.write(" C  "+str(xpos[j]) + "     "+str(ypos[j])+"     0.0     1.0   \n  ")
+    salida.open(filename, 'a')
+    salida.write(str(Nwalker)+"\n")
+    salida.write(str(i)+"\n")
+    for j in range(0, Nwalker):
+        salida.write(" C  "+str(xpos[j]) + "     "+str(ypos[j])+"     0.0     1.0   \n  ")
